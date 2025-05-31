@@ -1,0 +1,28 @@
+@import "../../assets/colors.scss";
+
+.card {
+    width: 80%;
+
+    height: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    justify-content: baseline;
+    flex-direction: column;
+    border-radius: 20px;
+    font-family: $font;
+
+    .name {
+        display: flex;
+        align-items: center;
+        font-family: $archivo;
+        gap: 10px;
+    }
+
+    p {
+        margin: 0px;
+        color: grey;
+    }
+}

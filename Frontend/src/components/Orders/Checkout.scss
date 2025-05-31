@@ -1,0 +1,63 @@
+@import "../../assets/colors.scss";
+
+.checkout {
+    padding: 20px;
+    max-width: 40vw;
+    margin: auto;
+    text-align: center;
+    font-family: $font;
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .checkout-container {
+        width: 100%;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 10px;
+        background: #fff;
+    }
+
+    .order-details {
+        text-align: left;
+    }
+
+    .order-item {
+        display: flex;
+        // flex-direction: column;
+        justify-content: space-between;
+        margin: 10px 0;
+        padding: 5px 0;
+        border-bottom: 1px solid #eee;
+        
+        img {
+            width: 10vw;
+            height: 30vh;
+        }
+    }
+
+    .total, .delivery {
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 15px;
+        font-size: 16px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+            background: #218838;
+        }
+        &:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+    }
+}

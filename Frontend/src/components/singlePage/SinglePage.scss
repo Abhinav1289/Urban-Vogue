@@ -1,0 +1,248 @@
+@import "../../assets/colors.scss";
+
+.SinglePage {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $back;
+
+    .single-container {
+        width: 90%;
+        margin-top: 30px;
+
+        .top {
+            width: 100%;
+            display: flex;
+
+            gap: 30px;
+
+
+            .left {
+                flex: 1;
+                background-color: red;
+                border-radius: 20px;
+                overflow: hidden;
+                border-radius: 20px;
+
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+
+
+                }
+            }
+
+            .right {
+                flex: 1;
+
+                font-family: $font;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                p {
+                    color: grey;
+                }
+
+                h1 {
+                    font-family: $archivo;
+                    text-transform: capitalize;
+                }
+
+                .price {
+                    font-weight: bolder;
+                    font-size: 25px;
+                }
+
+                .size {
+                    display: flex;
+
+                    gap: 30px;
+
+                    span {
+                        padding: 10px 15px;
+                        background-color: $text;
+                        border: 0.2px solid black;
+                        border-radius: 20px;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: black;
+                            color: white;
+                        }
+
+                    }
+                }
+
+
+
+
+                .buttons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 70%;
+
+                    gap: 20px;
+
+                    .btn {
+                        padding: 10px 40px;
+                        border: none;
+                        background-color: black;
+                        color: white;
+                        font-size: medium;
+                        border-radius: 20px;
+                        text-align: center;
+
+                        border: 0.2px solid black;
+
+                        &:hover {
+                            background-color: white;
+                            color: black;
+                            cursor: pointer;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-top: 40px;
+
+            gap: 20px;
+
+
+            .rating {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+
+                gap: 20px;
+
+                .card {
+                    width: 40%;
+                }
+            }
+
+            h1 {
+                font-family: $archivo;
+            }
+
+            .dress {
+                height: fit-content;
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 50px;
+    
+                a {
+                    box-shadow: none;
+        
+                    text-decoration: none;
+                    width: 30%;
+                    height: 100vh;
+                    padding: 0;
+                    .Pcard {
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+        .reviews {
+            font-family: $font;
+            width: 100%;
+            // max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+            ul {
+                height: 30vh;
+                overflow: hidden;
+                overflow-y: scroll;
+            }
+        
+            h2 {
+                color: $primary;
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+        
+            .review-card {
+                padding: 15px;
+                border-bottom: 1px solid #ddd;
+                margin-bottom: 10px;
+        
+                strong {
+                    color: $primary;
+                }
+        
+                p {
+                    margin: 5px 0;
+                    font-size: 14px;
+                }
+        
+                small {
+                    color: gray;
+                }
+            }
+        
+            .review-form {
+                display: flex;
+                gap: 10px;
+                margin-top: 15px;
+
+                label {
+                    width: 8vw;
+                    select {
+                        height: 100%;
+                        width: 100%;
+                        padding: 10px;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                    }
+                }
+        
+                textarea {
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 1px solid #ccc;
+                    height: 5vh;
+                    overflow: auto;
+                    resize: none;
+                }
+        
+                button {
+                    background: $primary;
+                    color: white;
+                    border: none;
+                    padding: 10px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    font-size: 16px;
+        
+                    &:hover {
+                        background: darken($primary, 10%);
+                    }
+                }
+            }
+        }
+    }
+}

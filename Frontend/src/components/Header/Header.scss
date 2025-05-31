@@ -1,0 +1,78 @@
+@import '../../assets/colors.scss';
+
+
+header {
+    width: 100%;
+    font-family: $font;
+
+    .top {
+        background-color: $primary;
+        height: 30px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 40px;
+        height: 80px;
+
+        h2 {
+            margin: 0px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            .logo {
+                margin-right: 15px;
+            }
+        }
+
+        input {
+            height: 30px;
+            width: 34%;
+            background-color: $text;
+            outline: none;
+            border: none;
+            border-radius: 60px;
+            padding: 8px 13px;
+        }
+
+        .user {
+            display: flex;
+            gap: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            color: $primary;
+        }
+    }
+
+    .logout-btn {
+        background: none;
+        border: none;
+        color: red;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 16px;
+    }
+    
+
+
+
+
+
+}

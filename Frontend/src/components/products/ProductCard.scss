@@ -1,0 +1,41 @@
+@import "../../assets/colors.scss";
+
+.Pcard {
+
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    font-family: $font;
+    gap: 20px;
+    background: $back;
+ 
+    .img_cont {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        overflow: hidden;
+        // background-color: $back;
+ 
+ 
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            background-color: $back;
+        }
+ 
+ 
+    }
+ 
+    .details {
+        display: flex;
+        gap: 5px;
+        justify-content: baseline;
+        flex-direction: column;
+ 
+ 
+        span {
+            font-weight: bold;
+        }
+    }
+}

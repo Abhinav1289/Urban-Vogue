@@ -1,0 +1,277 @@
+@import "../../assets/colors.scss";
+
+.main-container {
+
+    width: 100%;
+    height: 100%;
+
+
+    .img-cont {
+        background-image: url("./main.png");
+        // background-image: url("https://wallpaperaccess.com/full/5130281.jpg");   
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+        position: relative;
+
+
+        .abs-container {
+            position: absolute;
+            top: 15%;
+            width: 40%;
+            left: 10%;
+            display: flex;
+            flex-direction: column;
+
+
+            gap: 20px;
+
+
+            .image_heading {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+
+                h1 {
+                    width: 100%;
+                    font-family: $archivo;
+                    font-weight: bold;
+                    margin: 0px;
+                    font-size: 40px;
+
+                }
+
+
+
+            }
+
+            p {
+                font-family: $font;
+                color: black;
+                margin: 0px;
+            }
+
+
+
+
+            button {
+                padding: 15px 25px;
+                border: none;
+                outline: none;
+                color: white;
+                background-color: black;
+                border-radius: 40px;
+
+                &:hover {
+                    background-color: white;
+                    color: black;
+                    border: 0.2px solid black;
+                }
+            }
+
+            .bottom-rating {
+
+                height: 60px;
+                width: 100%;
+                display: flex;
+
+                align-items: baseline;
+                justify-content: center;
+
+                .content {
+                    border: 0.2px solid black;
+                    height: 100%;
+                    width: 33%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: $font;
+                    border: none;
+                    margin-top: 20px;
+
+                    .count {
+                        font-weight: bold;
+                        font-size: 30px;
+
+                    }
+
+                    .text-content {
+                        font-size: small;
+
+                    }
+
+                }
+            }
+
+        }
+
+
+
+    }
+
+
+    .moving-strip {
+        background-color: black;
+        padding: 10px;
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    .cardContainer {
+
+        margin-bottom: 100px;
+
+        h2 {
+            font-family: $archivo;
+            margin-left: 50px;
+            font-size: xx-large;
+        }
+    }
+
+    .dress-style {
+
+        width: 100%;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+
+
+        .dress-style-container {
+            display: flex;
+            font-family: $font;
+            font-weight: bold;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 70%;
+            width: 70%;
+            border-radius: 20px;
+            background-color: #F0F0F0;
+            padding: 20px;
+
+            gap: 20px;
+
+            .upper {
+                height: 50%;
+                width: 100%;
+                display: flex;
+
+                gap: 20px;
+
+                .left {
+                    border-radius: 20px;
+                    flex: 1;
+                    background-image: url("./casual.png");
+
+                }
+
+                .right {
+                    border-radius: 20px;
+
+                    flex: 2;
+
+                    background-image: url("./formal.png");
+                }
+            }
+
+            .lower {
+                width: 100%;
+                height: 50%;
+                display: flex;
+
+                gap: 20px;
+
+                .left {
+                    flex: 2;
+                    border-radius: 20px;
+
+
+                    background-image: url("./party.png");
+                }
+
+                .right {
+                    flex: 1;
+                    border-radius: 20px;
+
+                    background-image: url("./gym.png");
+                }
+            }
+
+            .abs-cat {
+                margin: 20px;
+            }
+        }
+    }
+
+
+    .products {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: $archivo;
+
+        gap: 10px;
+
+        .products-cont {
+
+            height: fit-content;
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+
+            a {
+                box-shadow: none;
+    
+                text-decoration: none;
+                width: 30%;
+                height: 100vh;
+                padding: 0;
+                .Pcard {
+                    width: 100%;
+                }
+            }
+        }
+
+        .viewMore {
+            padding: 10px 30px;
+            border-radius: 20px;
+            background-color: $back;
+            border: .3px solid grey;
+            font-family: $font;
+            text-decoration: none;
+            color: black;
+
+            &:hover {
+                cursor: pointer;
+                color: white;
+                background-color: black;
+            }
+        }
+    }
+
+    hr {
+        margin: 30px 0px;
+        width: 90%;
+        height: .5px;
+        background-color: $text;
+        border: none;
+    }
+
+
+
+}

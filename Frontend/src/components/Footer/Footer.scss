@@ -1,0 +1,107 @@
+@import "../../assets/colors.scss";
+
+.footer {
+    width: 100%;
+    background-color: $back;
+    height: 400px;
+    position: relative;
+    margin-top: 100px;
+
+
+
+    .rel-form {
+        position: absolute;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        left: 12.5%;
+        top: -50px;
+        height: 100px;
+        padding: 40px;
+        border-radius: 30px;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 31%;
+
+            input,
+            button {
+                background-color: $back;
+                border: none;
+                outline: none;
+                border-radius: 20px;
+                padding: 10px;
+            }
+
+
+        }
+
+        p {
+            color: white;
+            font-size: xx-large;
+            width: 50%;
+
+            font-family: $archivo;
+        }
+    }
+
+    .footer-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 30px;
+        margin-top: 40px;
+        font-family: $font;
+        padding-top: 8rem;
+
+        .left {
+
+            .social-media {
+                display: flex;
+                align-items: center;
+                justify-content: baseline;
+                gap: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+
+        .right {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 30px;
+
+            .footer-section {
+                text-align: left;
+            }
+
+            ul {
+                padding: 0px;
+
+                li {
+                    list-style: none;
+                }
+            }
+        }
+    }
+
+    .lower {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 30px;
+        border-top: 0.2px solid rgb(202, 202, 202);
+    }
+
+}
