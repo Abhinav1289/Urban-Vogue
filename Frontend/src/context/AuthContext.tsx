@@ -2,9 +2,8 @@ import { createContext, useContext, useState, useEffect, ReactNode } from "react
 import api from "../services/apiService"; // Centralized API service
 
 // Define User type
-interface User {
-  id: number; // ✅ Ensure ID is a number
-  userId: string;
+export interface User {
+  id: string;
   name: string;
   email: string;
 }

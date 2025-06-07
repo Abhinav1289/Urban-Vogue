@@ -31,8 +31,7 @@ const Login: React.FC = () => {
             const { userId, name, email: userEmail } = userResponse.data;
 
             // Update AuthContext
-            updateUser({ userId, name, email: userEmail });
-
+            updateUser({ id: userId, name, email: userEmail });
             console.log("Login successful");
             navigate("/");
         } catch (err: any) {

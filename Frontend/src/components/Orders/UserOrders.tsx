@@ -21,7 +21,8 @@ interface Order {
 }
 
 const UserOrders: React.FC = () => {
-    const { user } = useContext(AuthContext);
+    const authContext = useContext(AuthContext);
+    const user = authContext?.user;
     const [orders, setOrders] = useState<Order[]>([]);
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();

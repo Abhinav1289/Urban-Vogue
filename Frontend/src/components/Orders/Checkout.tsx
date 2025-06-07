@@ -6,6 +6,8 @@ import "./checkout.scss";
 
 interface OrderItem {
     productId: number;
+    name: string;
+    image: string;
     quantity: number;
     price: number;
 }
@@ -13,7 +15,8 @@ interface OrderItem {
 const Checkout: React.FC = () => {
     const location = useLocation();
     const navigate = useNavigate();
-    const { user } = useContext(AuthContext);
+    const authContext = useContext(AuthContext);
+    const user = authContext?.user;
     const [loading, setLoading] = useState(false);
 
     const orderData = location.state;
@@ -21,7 +24,7 @@ const Checkout: React.FC = () => {
         return <h2>No order data available. Please go back to the cart.</h2>;
     }
 
-    const { userId, orderItems, totalAmount, deliveryAddress } = orderData;
+    const { orderItems, totalAmount, deliveryAddress } = orderData;
 
     const handlePlaceOrder = async () => {
         if (!deliveryAddress.trim()) {
@@ -31,18 +34,17 @@ const Checkout: React.FC = () => {
         setLoading(true);
         try {
             const response = await api.post("/orders", { 
-                userId, 
+                userId: user.id, 
                 orderItems, 
                 totalAmount, 
                 deliveryAddress 
             });
-    
-            console.log("Order Response:", response); // ✅ Debugging log
-    
-            // ✅ Accept any 2xx status
+
+            console.log("Order Response:", response);
+
             if (response.status >= 200 && response.status < 300) { 
                 alert("Order placed successfully!");
-                navigate("/orders"); // Redirect to Orders page
+                navigate("/orders");
             } else {
                 alert("Unexpected response. Please check the logs.");
             }
@@ -59,7 +61,7 @@ const Checkout: React.FC = () => {
             <h1>Checkout</h1>
             <div className="checkout-container">
                 <h3>Order Summary</h3>
-                {orderItems.map((item, index) => (
+                {orderItems.map((item: OrderItem, index: number) => (
                     <div className="order-item" key={index}>
                         <img src={item.image} alt={item.name} className="order-img" />
                         <div>

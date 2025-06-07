@@ -20,7 +20,8 @@ interface CartItem {
 }
 
 const Cart: React.FC = () => {
-    const { user } = useContext(AuthContext);
+    const authContext = useContext(AuthContext);
+    const user = authContext?.user;
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
     const [deliveryAddress, setDeliveryAddress] = useState(""); // New state for address
     const navigate = useNavigate();

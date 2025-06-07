@@ -7,7 +7,6 @@ import ProductPage from "./components/products/Products";
 import SinglePage from "./components/singlePage/SinglePage";
 import SignUp from "./components/Auth/SignUp";
 import Login from "./components/Auth/Login";
-import ProtectedRoute from "./components/ProtectedRoute"; // Import Protected Route
 import Cart from "./components/Cart/Cart";
 import Wishlist from "./components/Wishlist/Wishlist"; // Example protected page
 import Checkout from "./components/Orders/Checkout";
@@ -29,11 +28,6 @@ const router = createBrowserRouter([
   },
   { path: "/login", element: <Login /> },
   { path: "/signup", element: <SignUp /> },
-  // {
-  //   path: "/",
-  //   element: <ProtectedRoute />, // Protected Route
-  //   children: [{ path: "/wishlist", element: <Wishlist /> }],
-  // },
 ]);
 
 function App() {
